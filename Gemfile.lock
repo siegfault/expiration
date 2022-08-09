@@ -122,6 +122,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.3.1)
     jwt (2.2.2)
+    libv8 (3.16.14.19)
     listen (3.6.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -133,14 +134,14 @@ GEM
     marcel (1.0.1)
     method_source (1.0.0)
     mini_mime (1.1.0)
-    mini_portile2 (2.8.0)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     nio4r (2.5.8)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     oauth2 (1.4.4)
       faraday (>= 0.8, < 2.0)
@@ -169,7 +170,7 @@ GEM
     public_suffix (4.0.6)
     puma (5.4.0)
       nio4r (~> 2.0)
-    racc (1.6.0)
+    racc (1.5.2)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -214,6 +215,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdoc (6.3.1)
+    ref (2.0.0)
     regexp_parser (2.1.1)
     rexml (3.2.5)
     rspec-core (3.10.1)
@@ -282,6 +284,9 @@ GEM
     sync (0.5.0)
     term-ansicolor (1.7.1)
       tins (~> 1.0)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thor (1.1.0)
     tilt (2.0.10)
     tins (1.25.0)
@@ -337,13 +342,14 @@ DEPENDENCIES
   sdoc
   simplecov
   spring
+  therubyracer
   turbolinks
   uglifier
   web-console
   will_paginate
 
 RUBY VERSION
-   ruby 3.1.0p0
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.1.4
