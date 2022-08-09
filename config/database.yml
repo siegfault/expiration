@@ -2,6 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
+  username: expiration
 
 development:
   <<: *default
@@ -14,5 +15,4 @@ test:
 production:
   <<: *default
   database: expiration_production
-  username: expiration
   password: <%= ENV['EXPIRATION_DATABASE_PASSWORD'] %>
