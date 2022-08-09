@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.1.0'
+ruby '2.7.2'
 
 gem 'bugsnag'
 gem 'coffee-rails'
@@ -16,6 +16,7 @@ gem 'puma'
 gem 'rails'
 gem 'sass-rails'
 gem 'sdoc', group: :doc
+gem 'therubyracer'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'will_paginate'
