@@ -7,7 +7,7 @@ RSpec.describe ExpirationDate do
     let(:expiration_date) { described_class.new('strawberries') }
 
     context 'when the food has been added before' do
-      before { FactoryBot.create(:food, name: 'strawberries', expiration: 3.days.ago, created_at: 9.days.ago) }
+      before { create(:food, name: 'strawberries', expiration: 3.days.ago, created_at: 9.days.ago) }
 
       it 'uses the expiration length of the last food' do
         expect(expiration_date.calculate).to eq(6.days.from_now.to_date)
