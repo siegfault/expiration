@@ -19,7 +19,7 @@ RSpec.describe FoodsHelper do
     end
 
     context 'when the food expires in more than one week' do
-      let(:food) { instance_spy(Food, expiration: 8.day.from_now) }
+      let(:food) { instance_spy(Food, expiration: 8.days.from_now) }
 
       specify { expect(freshness).to eq('success') }
     end

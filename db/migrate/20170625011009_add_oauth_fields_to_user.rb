@@ -2,7 +2,7 @@
 
 class AddOauthFieldsToUser < ActiveRecord::Migration[5.1]
   def change
-    add_column :users, :provider,         :text
+    add_column :users, :provider,         :text # rubocop:todo Rails/BulkChangeTable
     add_column :users, :uid,              :text
     add_column :users, :first_name,       :text
     add_column :users, :last_name,        :text

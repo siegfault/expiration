@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true, format: /\A.*@.*\z/
   validates :provider, :uid, :first_name, :last_name, :token, :oauth_expires_at, presence: true
 

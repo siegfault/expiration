@@ -16,7 +16,7 @@ RSpec.describe ExpirationDate do
 
     context 'when the food has not been added before' do
       it 'defaults to today' do
-        expect(expiration_date.calculate).to eq(Date.today)
+        expect(expiration_date.calculate).to eq(Time.zone.today)
       end
     end
   end

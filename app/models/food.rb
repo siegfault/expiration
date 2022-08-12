@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Food < ActiveRecord::Base
+class Food < ApplicationRecord
   self.per_page = 100
 
   validates :name, presence: true
@@ -27,11 +27,11 @@ class Food < ActiveRecord::Base
   end
 
   def throw_out!
-    update!(trashed_on: Date.today)
+    update!(trashed_on: Time.zone.today)
   end
 
   def finish_eating!
-    update!(eaten_on: Date.today)
+    update!(eaten_on: Time.zone.today)
   end
 
   def expiration_length

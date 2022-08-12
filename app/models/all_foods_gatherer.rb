@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
 class AllFoodsGatherer
+  delegate :foods, to: :user
+
   def initialize(user:)
     @user = user
-  end
-
-  def foods
-    user.foods
   end
 
   def count
@@ -14,5 +12,6 @@ class AllFoodsGatherer
   end
 
   private
+
   attr_reader :user
 end
