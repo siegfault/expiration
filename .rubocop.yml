@@ -1,4 +1,9 @@
 inherit_from: .rubocop_todo.yml
+
+inherit_mode:
+  merge:
+    - Exclude
+
 require:
   - rubocop-performance
   - rubocop-rails
@@ -29,6 +34,10 @@ RSpec/MultipleExpectations:
 
 RSpec/NestedGroups:
   Max: 4
+
+Style/Documentation:
+  Exclude:
+    - db/**/*
 
 Style/EmptyMethod:
   EnforcedStyle: expanded
