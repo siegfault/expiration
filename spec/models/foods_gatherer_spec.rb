@@ -13,10 +13,10 @@ RSpec.describe FoodsGatherer do
 
     context 'when there is one eaten, 2 trashed, and 3 expiring foods' do
       before do
-        allow(AllFoodsGatherer).to      receive(:new).and_return(OpenStruct.new(count: 6))
-        allow(EatenFoodsGatherer).to    receive(:new).and_return(OpenStruct.new(count: 1))
-        allow(TrashedFoodsGatherer).to  receive(:new).and_return(OpenStruct.new(count: 2))
-        allow(ExpiringFoodsGatherer).to receive(:new).and_return(OpenStruct.new(count: 3))
+        allow(AllFoodsGatherer).to      receive(:new).and_return(instance_double(AllFoodsGatherer,      count: 6))
+        allow(EatenFoodsGatherer).to    receive(:new).and_return(instance_double(EatenFoodsGatherer,    count: 1))
+        allow(TrashedFoodsGatherer).to  receive(:new).and_return(instance_double(TrashedFoodsGatherer,  count: 2))
+        allow(ExpiringFoodsGatherer).to receive(:new).and_return(instance_double(ExpiringFoodsGatherer, count: 3))
       end
 
       specify { expect(counts).to match(all: 6, eaten: 1, trashed: 2, expiring: 3) }
