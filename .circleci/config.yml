@@ -6,10 +6,10 @@ jobs:
         environment:
           RAILS_ENV: test
           PGHOST: 127.0.0.1
-          PGUSER: root
+          PGUSER: expiration
       - image: circleci/postgres:12.4
         environment:
-          POSTGRES_USER: root
+          POSTGRES_USER: expiration
           POSTGRES_PASSWORD: $POSTGRES_PASSWORD
           POSTGRES_DB: expiration_test
     steps:
