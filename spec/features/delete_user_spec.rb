@@ -7,10 +7,10 @@ RSpec.describe 'Delete users', type: :feature do
     user = create(:user, first_name: 'Daffy', last_name: 'Duck')
     visit root_path
     mock_auth_hash(user: user)
-    click_link 'Sign in with Google'
+    click_button 'Sign in with Google'
 
     click_link 'Daffy Duck'
     click_link('Permanently delete user')
-    expect(page).to have_text 'Sign in with Google'
+    expect(page).to have_button 'Sign in with Google'
   end
 end

@@ -7,7 +7,7 @@ RSpec.describe 'Manipulate food', type: :feature do
     user = create(:user)
     visit root_path
     mock_auth_hash(user: user)
-    click_link 'Sign in with Google'
+    click_button 'Sign in with Google'
 
     expect(page).not_to have_text('My new great food')
     click_link 'Add New Item'
@@ -27,7 +27,7 @@ RSpec.describe 'Manipulate food', type: :feature do
 
     visit root_path
     mock_auth_hash(user: food.user)
-    click_link 'Sign in with Google'
+    click_button 'Sign in with Google'
 
     click_link 'filter_by_status_expiring'
     click_link "edit_food_#{food.id}"
