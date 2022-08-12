@@ -20,7 +20,7 @@ RSpec.describe ExpirationDatesController do
       it 'returns today' do
         get :show, params: { id: 'strawberries' }, session: { user_id: user.id }, format: :json
 
-        expect(response.body).to eq({ expires_on: Date.today }.to_json)
+        expect(response.body).to eq({ expires_on: Time.zone.today }.to_json)
       end
     end
   end

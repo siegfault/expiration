@@ -6,6 +6,7 @@ default: &default
 development:
   <<: *default
   database: expiration_development
+  username: expiration
 
 test:
   <<: *default

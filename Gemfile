@@ -26,6 +26,7 @@ group :development, :test do
   gem 'pry'
   gem 'rubocop'
   gem 'rubocop-performance'
+  gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'spring'
 end
