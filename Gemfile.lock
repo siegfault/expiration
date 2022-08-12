@@ -132,7 +132,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (2.6.2)
     jwt (2.4.1)
-    libv8 (3.16.14.19)
+    libv8-node (16.10.0.0-x86_64-linux)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -145,7 +145,8 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
+    mini_racer (0.6.2)
+      libv8-node (~> 16.10.0.0)
     minitest (5.16.2)
     multi_json (1.15.0)
     multi_xml (0.6.0)
@@ -164,8 +165,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     oauth2 (1.4.10)
       faraday (>= 0.17.3, < 3.0)
@@ -245,7 +245,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdoc (6.3.1)
-    ref (2.0.0)
     regexp_parser (2.5.0)
     rexml (3.2.5)
     rspec-core (3.10.1)
@@ -319,9 +318,6 @@ GEM
     sync (0.5.0)
     term-ansicolor (1.7.1)
       tins (~> 1.0)
-    therubyracer (0.12.3)
-      libv8 (~> 3.16.14.15)
-      ref
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.3.0)
@@ -349,7 +345,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   bugsnag
@@ -362,6 +358,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   listen
+  mini_racer
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   pg
@@ -380,14 +377,13 @@ DEPENDENCIES
   sdoc
   simplecov
   spring
-  therubyracer
   turbolinks
   uglifier
   web-console
   will_paginate
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.1.2p20
 
 BUNDLED WITH
-   2.1.4
+   2.3.20

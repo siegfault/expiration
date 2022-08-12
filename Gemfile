@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.7.2'
+ruby File.read('.ruby-version').strip
 
 gem 'bugsnag'
 gem 'coffee-rails'
@@ -10,6 +10,7 @@ gem 'dotenv-rails'
 gem 'dynamic_form'
 gem 'jbuilder'
 gem 'jquery-rails'
+gem 'mini_racer'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 gem 'pg'
@@ -17,7 +18,6 @@ gem 'puma'
 gem 'rails'
 gem 'sass-rails'
 gem 'sdoc', group: :doc
-gem 'therubyracer'
 gem 'turbolinks'
 gem 'uglifier'
 gem 'will_paginate'

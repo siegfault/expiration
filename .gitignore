@@ -1,7 +1,6 @@
 !/log/.keep
 *.swp
 .env
-.ruby-version
 /.bundle
 /log/*
 /tmp
