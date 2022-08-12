@@ -6,11 +6,11 @@ RSpec.describe FoodsMailer do
   describe '#food_status_email' do
     let(:mail) { described_class.food_status_email(user).deliver_now }
 
-    let(:user) { FactoryBot.create(:user, email: 'foo@bar.com') }
-    let(:eaten_food)    { FactoryBot.create(:food, :eaten,    name: 'Eaten food', user: user) }
-    let(:expired_food)  { FactoryBot.create(:food, :expired,  name: 'Expired Food', user: user) }
-    let(:expiring_food) { FactoryBot.create(:food, :expiring, name: 'Expiring Food', user: user) }
-    let(:trashed_food)  { FactoryBot.create(:food, :trashed,  name: 'Trashed Food', user: user) }
+    let(:user) { create(:user, email: 'foo@bar.com') }
+    let(:eaten_food)    { create(:food, :eaten,    name: 'Eaten food', user: user) }
+    let(:expired_food)  { create(:food, :expired,  name: 'Expired Food', user: user) }
+    let(:expiring_food) { create(:food, :expiring, name: 'Expiring Food', user: user) }
+    let(:trashed_food)  { create(:food, :trashed,  name: 'Trashed Food', user: user) }
 
     describe 'the subject' do
       specify { expect(mail.subject).to eq('Your food is expiring soon!') }

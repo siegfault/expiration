@@ -4,15 +4,15 @@ require 'rails_helper'
 
 describe TrashedFoodsGatherer do
   let(:gatherer) { described_class.new(user: my_user) }
-  let(:my_user) { FactoryBot.create(:user, foods: my_user_foods) }
-  let!(:other_user_food) { FactoryBot.create(:food) }
+  let(:my_user) { create(:user, foods: my_user_foods) }
+  let!(:other_user_food) { create(:food) }
 
   context 'when the user has two trashed foods and one non trashed food' do
     let(:my_user_foods) { [expiring, trashed1, trashed2] }
 
-    let(:expiring) { FactoryBot.create(:food, :expiring) }
-    let(:trashed1) { FactoryBot.create(:food, :trashed) }
-    let(:trashed2) { FactoryBot.create(:food, :trashed) }
+    let(:expiring) { create(:food, :expiring) }
+    let(:trashed1) { create(:food, :trashed) }
+    let(:trashed2) { create(:food, :trashed) }
 
     describe '#foods' do
       let(:food_ids) { gatherer.foods.map(&:id) }
