@@ -1,11 +1,13 @@
-<%= error_messages_for @food, class: 'alert-danger' %>
-
 <%= form_for @food do |f| %>
   <%= f.label :name %>:
-  <%= f.text_field :name %><br />
+  <%= f.text_field :name %>
+  <%= f.error_message_on :name %>
+  <br />
 
   <%= f.label :expiration %>:
-  <%= f.date_field :expiration %><br />
+  <%= f.date_field :expiration %>
+  <%= f.error_message_on :expiration %>
+  <br />
 
   <%= f.submit %>
 <% end %>

@@ -12,8 +12,8 @@ RSpec.describe 'Manipulate food', type: :feature do
     expect(page).not_to have_text('My new great food')
     click_link 'Add New Item'
     click_button 'Create Food'
-    expect(page).to have_text("Name can't be blank")
-    expect(page).to have_text("Expiration can't be blank")
+    expect(page).to have_text("can't be blank")
+    expect(page).to have_text("can't be blank")
 
     fill_in 'food_name', with: 'My new great food'
     fill_in 'food_expiration', with: Date.tomorrow
@@ -34,8 +34,8 @@ RSpec.describe 'Manipulate food', type: :feature do
     fill_in 'food_name', with: ''
     fill_in 'food_expiration', with: nil
     click_button 'Update Food'
-    expect(page).to have_text("Name can't be blank")
-    expect(page).to have_text("Expiration can't be blank")
+    expect(page).to have_text("can't be blank")
+    expect(page).to have_text("can't be blank")
 
     fill_in 'food_name', with: 'New Named food!'
     fill_in 'food_expiration', with: 1.year.from_now

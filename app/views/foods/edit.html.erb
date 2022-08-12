@@ -1,17 +1,24 @@
-<%= error_messages_for @food, class: 'alert-danger' %>
 
 <%= form_for @food do |f| %>
   <%= f.label :name %>:
-  <%= f.text_field :name %><br />
+  <%= f.text_field :name %>
+  <%= f.error_message_on :name %>
+  <br />
 
   <%= f.label :expiration %>:
-  <%= f.date_field :expiration %><br />
+  <%= f.date_field :expiration %>
+  <%= f.error_message_on :expiration %>
+  <br />
 
   <%= f.label :eaten %>:
-  <%= f.date_field :eaten_on %><br />
+  <%= f.date_field :eaten_on %>
+  <%= f.error_message_on :eaten_on %>
+  <br />
 
   <%= f.label :tashed %>:
-  <%= f.date_field :trashed_on %><br />
+  <%= f.date_field :trashed_on %>
+  <%= f.error_message_on :trashed_on %>
+  <br />
 
   <%= f.submit %>
 <% end %>
