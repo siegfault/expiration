@@ -13,6 +13,10 @@ class FoodsController < ApplicationController
     @food = current_user.foods.new
   end
 
+  def edit
+    @food = current_user.foods.find(params[:id])
+  end
+
   def create
     @food = current_user.foods.new(food_create_params)
     if @food.save
@@ -20,10 +24,6 @@ class FoodsController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def edit
-    @food = current_user.foods.find(params[:id])
   end
 
   def update
