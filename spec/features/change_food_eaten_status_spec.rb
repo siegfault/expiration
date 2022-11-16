@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe "Change food's status", type: :feature do
+RSpec.describe "Change food's status" do
   it 'user eats food' do # rubocop:disable RSpec/ExampleLength
     food = create(:food, name: 'Yummy food')
 

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Manipulate food', type: :feature do
+RSpec.describe 'Manipulate food' do
   it 'user creates food' do # rubocop:disable RSpec/ExampleLength
     user = create(:user)
     visit root_path

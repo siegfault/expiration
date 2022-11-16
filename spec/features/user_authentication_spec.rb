@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'user authentication', type: :feature do
+RSpec.describe 'user authentication' do
   it 'user logs in with google auth' do
     visit root_path
     expect(page).to have_button('Sign in with Google')
