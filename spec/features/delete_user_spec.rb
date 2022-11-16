@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Delete users', type: :feature do
+RSpec.describe 'Delete users' do
   it 'user deletes their user' do # rubocop:disable RSpec/ExampleLength
     user = create(:user, first_name: 'Daffy', last_name: 'Duck')
     visit root_path
