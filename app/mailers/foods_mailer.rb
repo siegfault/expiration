@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class FoodsMailer < ApplicationMailer
-  default from: 'notifications@expiration.xyz'
-
   def food_status_email(user)
     @user = user
     @expired_items = user.foods.expired.not_eaten.not_trashed.ordered
