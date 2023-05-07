@@ -4,29 +4,26 @@ require 'rails_helper'
 
 describe ExpiringFoodsGatherer do
   let(:gatherer) { described_class.new(user: my_user) }
-  let(:my_user) { create(:user, foods: my_user_foods) }
   let!(:other_user_food) { create(:food) }
 
   context 'when the user has two expiring foods and one non expiring food' do
-    let(:my_user_foods) { [expiring1, expiring2, trashed] }
-
-    let(:expiring1) { create(:food, :expiring) }
-    let(:expiring2) { create(:food, :expiring) }
+    let(:my_user) { create(:user, foods: [*expiring, trashed]) }
+    let(:expiring) { create_list(:food, 2, :expiring) }
     let(:trashed) { create(:food, :trashed) }
 
     describe '#foods' do
-      let(:food_ids) { gatherer.foods.map(&:id) }
+      let(:foods) { gatherer.foods }
 
       it "includes the user's expiring foods" do
-        expect(food_ids).to include(expiring1.id, expiring2.id)
+        expect(foods).to match_array(expiring)
       end
 
       it "does not include the user's other foods" do
-        expect(food_ids).not_to include(trashed.id)
+        expect(foods).not_to include(trashed)
       end
 
       it "does not include another user's foods" do
-        expect(food_ids).not_to include(other_user_food.id)
+        expect(foods).not_to include(other_user_food)
       end
     end
 
