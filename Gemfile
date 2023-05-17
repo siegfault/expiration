@@ -26,6 +26,8 @@ group :development, :test do
   gem 'coveralls'
   gem 'pry'
   gem 'rubocop'
+  gem 'rubocop-capybara'
+  gem 'rubocop-factory_bot'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
