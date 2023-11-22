@@ -23,7 +23,7 @@ gem 'uglifier'
 gem 'will_paginate'
 
 group :development, :test do
-  gem 'coveralls'
+  gem 'coveralls_reborn'
   gem 'pry'
   gem 'rubocop'
   gem 'rubocop-capybara'
