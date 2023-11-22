@@ -37,7 +37,7 @@ jobs:
           command: bundle exec rails db:create db:schema:load db:migrate
       - run:
           name: Tests
-          command: bundle exec rspec spec --format progress
+          command: circleci tests run --command='bundle exec rspec spec --format progress'
   rubocop:
     docker:
       - image: cimg/ruby:3.1.2
