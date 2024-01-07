@@ -19,6 +19,10 @@ AllCops:
   NewCops: enable
   TargetRubyVersion: 2.7
 
+# Supposedly the default, but seems to be acting the opposite
+Capybara/NegationMatcher:
+  EnforcedStyle: not_to
+
 Layout/HashAlignment:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
