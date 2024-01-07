@@ -7,7 +7,7 @@ RSpec.describe 'user authentication' do
     visit root_path
     expect(page).to have_button('Sign in with Google')
     mock_auth_hash
-    click_button 'Sign in with Google'
+    click_link_or_button 'Sign in with Google'
     expect(page).to have_content('Michael Siegfried')
   end
 
@@ -15,9 +15,9 @@ RSpec.describe 'user authentication' do
     mock_auth_hash
     visit root_path
     expect(page).to have_button('Sign in with Google')
-    click_button 'Sign in with Google'
+    click_link_or_button 'Sign in with Google'
     expect(page).to have_link('Logout')
-    click_link 'Logout'
+    click_link_or_button 'Logout'
     expect(page).to have_button('Sign in with Google')
   end
 
@@ -25,7 +25,7 @@ RSpec.describe 'user authentication' do
     visit root_path
     expect(page).to have_button('Sign in with Google')
     mock_auth_hash(expires_at: 1.hour.ago)
-    click_button 'Sign in with Google'
+    click_link_or_button 'Sign in with Google'
     expect(page).to have_button('Sign in with Google')
   end
 end
