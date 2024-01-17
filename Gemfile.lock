@@ -81,7 +81,7 @@ GEM
     base64 (0.2.0)
     bigdecimal (3.1.5)
     bindex (0.8.1)
-    bugsnag (6.26.1)
+    bugsnag (6.26.2)
       concurrent-ruby (~> 1.0)
     builder (3.2.4)
     capybara (3.39.2)
@@ -101,7 +101,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.2.2)
+    concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     coveralls_reborn (0.28.0)
       simplecov (~> 0.22.0)
