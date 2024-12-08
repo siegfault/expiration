@@ -12,7 +12,7 @@ class RemovePasswordAndUsernameFromUsers < ActiveRecord::Migration
 
     User.update_all("password_digest = '', username = email") # rubocop:todo Rails/SkipsModelValidations
 
-    change_column_null :users, :password_digest, false
+    change_column_null :users, :password_digest, false # rubocop:todo Rails/BulkChangeTable
     change_column_null :users, :username, false
   end
 end
