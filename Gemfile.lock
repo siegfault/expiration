@@ -79,7 +79,7 @@ GEM
     benchmark (0.4.1)
     bigdecimal (3.2.2)
     bindex (0.8.1)
-    bugsnag (6.27.1)
+    bugsnag (6.28.0)
       concurrent-ruby (~> 1.0)
     builder (3.3.0)
     capybara (3.40.0)
